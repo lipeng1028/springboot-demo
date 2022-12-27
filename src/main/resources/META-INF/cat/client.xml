@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config mode="client">
+	<domain id="sxpayTest"/><!-- 其中id的值是你在CAT中将项目命名的别名，建议最好是项目名 -->
+    <servers><!-- 指向CAT服务端地址，如果本地电脑是服务器，ip也可以写成127.0.0.1 -->
+		<!-- ip：部署CAT的服务器IP
+             port：CAT服务端接收客户端数据的端口（2280，不允许更改）
+             http-port：CAT部署到的容器的端口（tomcat的端口）
+        -->
+        <server ip="211.137.43.228" port="2280" http-port="8083"/>
+    </servers>
+</config>

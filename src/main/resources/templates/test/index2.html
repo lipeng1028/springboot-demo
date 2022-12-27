@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index2</title>
+</head>
+<style>
+td{
+border-left:1px solid #F00;border-top:1px solid #F00
+}
+th{
+border-left:1px solid #F00;border-top:1px solid #F00
+}
+</style>
+<body>
+<table style="border: 1px solid #F00;">
+	<thead>
+		<tr>
+			<th>用户名</th>
+			<th>密码</th>
+			<th>4a用户名</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="account:${list}">
+			<td th:text="${account.username}"></td>
+			<td th:text="${account.password}"></td>
+			<td th:text="${account.loginname4A}"></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxit.mapper.PgcAccountMapper">
+
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID AS id, LASTLOGINDATE AS lastlogindate, CNANNEL_ID AS cnannelId, ACCOUNTNONEXPIRED AS accountnonexpired, LASTLOGOUTDATE AS lastlogoutdate, IDCARD AS idcard, CITY AS city, ROLE_ID AS roleId, LOGINNAME AS loginname, CREDENTIALSNONEXPIRED AS credentialsnonexpired, CREATE_ID AS createId, AREA AS area, PHONE AS phone, CREATE_TIME AS createTime, ACCOUNTNONLOCKED AS accountnonlocked, LASTLOGINIP AS lastloginip, ENABLED AS enabled, PASSWORD AS password, STREET AS street, PROVINCE AS province, EMAIL AS email, USERNAME AS username
+    </sql>
+    
+    <select id="selectList" resultType="com.sxit.entity.PgcAccount">
+    	select 
+    		<include refid="Base_Column_List"/>
+    	from 
+    		pgc_account
+    </select>
+    
+    <select id="selectByParam" resultType="com.sxit.entity.PgcAccount">
+    	select 
+    		<include refid="Base_Column_List"/>
+    	from 
+    		pgc_account t
+    	<where>
+    		<if test="id != null">
+    			and t.ID &gt; #{id}
+    		</if>
+    	</where>
+    </select>
+    
+</mapper>
