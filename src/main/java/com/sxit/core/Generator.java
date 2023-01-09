@@ -25,7 +25,7 @@ public class Generator {
 
     // 表前缀
     private final static String[] TABLEPREFIX = new String[] {
-			"SPC_"
+			"SPC"
     };
     // 需要生成的表
     private final static String[] INCLUDE     = new String[] {
